@@ -17,10 +17,10 @@ function App() {
       <header className="header fixed w-full">
         <Navbar/>
       </header>
-      <div className="home-cont w-full pt-24">
+      <div className="home-cont w-full pt-24" id='home'>
         <Home/>
       </div>
-      <div className="about-cont w-full">
+      <div className="about-cont w-full" id='about'>
         <About/>
       </div>
     </div>

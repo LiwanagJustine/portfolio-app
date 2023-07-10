@@ -1,6 +1,5 @@
 
 import { FaMoon } from 'react-icons/fa';
-import { FaSun } from 'react-icons/fa';
 
 const Darkmode = () => {
     return (

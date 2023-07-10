@@ -28,7 +28,7 @@ const Home = () => {
                             </button>
                         </p>
                     </div>
-                    <div className="social-media md:mt-5 flex md:flex md:w-1/4 md:justify-betweenn w-full justify-center gap-3.5 mt-5">
+                    <div className="social-media md:mt-5 flex md:flex md:justify-normal md:w-full w-full justify-center gap-3.5 mt-5">
                         <div className="icon">
                             <FaFacebook className="text-3xl text-slate-800 duration-300 hover:text-blue-600"/>
                         </div>

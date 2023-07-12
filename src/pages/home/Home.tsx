@@ -19,8 +19,8 @@ const Home = () => {
                 <div className="left-cont md:w-1/2 md:text-left text-center md:pl-0 pt-5 p-10">
                     <div className="intro-cont md:mt-32">
                         <h5 className='md:text-2xl md:font-semibold text-blue-500 md:flex md:justify-start flex justify-center gap-3'>Hello<span><FaHandsClapping className="text-yellow-300"/></span> I'm</h5>
-                        <h2 className='md:text-5xl font-bold text-slate-800 md:mt-2 text-3xl'>Justine Liwanag</h2>
-                        <h3 className='md:text-3xl md:font-semibold md:mt-5 mt-1 text-slate-500 font-semibold text-xl'>And I'm a <span className='text-slate-800'>Frontend Web Developer</span></h3>
+                        <h2 className='md:text-5xl font-bold text-slate-800 md:mt-2 text-3xl dark:text-white'>Justine Liwanag</h2>
+                        <h3 className='md:text-3xl md:font-semibold md:mt-5 mt-1 text-slate-500 font-semibold text-xl dark:text-white'>And I'm a <span className='text-slate-800'>Frontend Web Developer</span></h3>
                         <p className='md:text-md md:font-semibold md:mt-5 mt-3 text-sm text-slate-500'>
                             Welcome to my web portfolio! I'm a passionate frontend developer with a strong love for creating visually appealing and user-friendly websites.
                             <button className=' w-fit ml-2 rounded-full text-blue-500'>
@@ -30,16 +30,16 @@ const Home = () => {
                     </div>
                     <div className="social-media md:mt-5 flex md:flex md:justify-normal md:w-full w-full justify-center gap-3.5 mt-5">
                         <div className="icon">
-                            <FaFacebook className="text-3xl text-slate-800 duration-300 hover:text-blue-600"/>
+                            <FaFacebook className="text-3xl text-slate-800 duration-300 hover:text-blue-600 dark:text-white"/>
                         </div>
                         <div className="icon">
-                            <FaLinkedin className="text-3xl text-slate-800 duration-300 hover:text-blue-600"/>
+                            <FaLinkedin className="text-3xl text-slate-800 duration-300 hover:text-blue-600 dark:text-white"/>
                         </div>
                         <div className="icon">
-                            <FaGithub className="text-3xl text-slate-800 duration-300 hover:text-orange-800"/>
+                            <FaGithub className="text-3xl text-slate-800 duration-300 hover:text-orange-800 dark:text-white"/>
                         </div>
                         <div className="icon">
-                            <FaEnvelope className="text-3xl text-slate-800 duration-300 hover:text-blue-600"/>
+                            <FaEnvelope className="text-3xl text-slate-800 duration-300 hover:text-blue-600 dark:text-white"/>
                         </div>
                         
                     </div>

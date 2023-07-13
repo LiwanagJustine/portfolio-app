@@ -1,5 +1,6 @@
 
 import './Home.css'
+import { useEffect, useState } from 'react';
 
 // images
 import imageHomeBG from "../../assets/images/home-bg-image-2nd.png";
@@ -11,8 +12,17 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaEnvelope } from "react-icons/fa";
 
+
 const Home = () => {
 
+    const [jobTitle, setJobTitle] = useState("Frontend Web Developer");
+    useEffect(() => {
+        const typingDelay = setTimeout(() => {
+          setJobTitle("Laravel Developer");
+        }, 1500);
+      
+        return () => clearTimeout(typingDelay);
+      }, []);
     return (
         <div className="home-container w-full md:pl-32 h-fit">
             <div className="home w-full md:h-full md:flex">
@@ -20,7 +30,7 @@ const Home = () => {
                     <div className="intro-cont md:mt-32">
                         <h5 className='md:text-2xl md:font-semibold text-blue-500 md:flex md:justify-start flex justify-center gap-3'>Hello<span><FaHandsClapping className="text-yellow-300"/></span> I'm</h5>
                         <h2 className='md:text-5xl font-bold text-slate-800 md:mt-2 text-3xl dark:text-white'>Justine Liwanag</h2>
-                        <h3 className='md:text-3xl md:font-semibold md:mt-5 mt-1 text-slate-500 font-semibold text-xl dark:text-white'>And I'm a <span className='text-slate-800'>Frontend Web Developer</span></h3>
+                        <h3 className='md:text-3xl md:font-semibold md:mt-5 mt-1 text-slate-500 font-semibold text-xl dark:text-white'>And I'm a <span className='text-slate-700'>{jobTitle}</span></h3>
                         <p className='md:text-md md:font-semibold md:mt-5 mt-3 text-sm text-slate-500'>
                             Welcome to my web portfolio! I'm a passionate frontend developer with a strong love for creating visually appealing and user-friendly websites.
                             <button className=' w-fit ml-2 rounded-full text-blue-500'>

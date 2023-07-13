@@ -8,7 +8,9 @@ export default {
   ],
   theme: {
     extend: {
-    
+      boxShadow: {
+        'custom': '0 4px 20px -5px rgb(0 0 0 / 0.2)', 
+      }
     },
   },
   plugins: [

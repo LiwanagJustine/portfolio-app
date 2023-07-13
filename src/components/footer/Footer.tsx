@@ -2,7 +2,10 @@
 const Footer = () => {
     return (
         <div>
-            <h2>Footer</h2>
+            <div className="footer w-full dark:bg-slate-950 bg-slate-800 h-52">
+                
+            </div>
+            
         </div>
     );
 };

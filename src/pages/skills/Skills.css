@@ -1,0 +1,39 @@
+.skill-container{
+    height: 120vh;
+}
+ .skill-container .content{
+    height: 95vh;
+ }
+.box .img img{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+.box:hover{
+    box-shadow: rgba(176, 173, 173, 0.35) 0px 10px 35px;
+}
+.content .box:hover img{
+    transform: scale(1.2);
+    z-index: 1;
+}
+.skill-container .content::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cac8c8;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  

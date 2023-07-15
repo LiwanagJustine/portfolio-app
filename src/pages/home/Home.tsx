@@ -1,7 +1,6 @@
 
 import './Home.css'
-import { useEffect, useState } from 'react';
-import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from 'react-simple-typewriter';
 
 // images
 import imageHomeBG from "../../assets/images/home-bg-image-2nd.png";

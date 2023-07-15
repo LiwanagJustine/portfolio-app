@@ -44,7 +44,7 @@ function App() {
       <div className="contact-cont pt-24 z-0 dark:bg-slate-800 " id="contact">
         <Contact />
       </div>
-      <div className="footer dark:bg-slate-950 ">
+      <div className="footer dark:bg-slate-950">
         <Footer />
       </div>
     </div>

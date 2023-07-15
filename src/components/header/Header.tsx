@@ -3,6 +3,8 @@ import { useState } from "react";
 import DarkMode from "../buttons/DarkMode";
 import Close from "../buttons/Close";
 
+import resumeFile from '../../assets/files/Justine T. Liwanag-Resume.pdf';
+
 interface Props{
     darkMode: () => void;
     isDarkMode: boolean;
@@ -34,14 +36,16 @@ const Header = ({darkMode, isDarkMode} : Props) => {
                         {navigation.map((nav, index) => (
                             <li key={index} className="w-full"> 
                                 <a href={"#" + nav}>
-                                <button key={index} className={selectedNav === index ? " w-full text-blue-600 rounded p-2 capitalize" : " w-full text-slate-800 dark:text-white dark:hover:text-blue-700 rounded p-2 duration-300 hover:text-blue-700 capitalize"} onClick={() => setSelectedNav(index)}>{nav}</button>
+                                    <button key={index} className={selectedNav === index ? "active w-full text-blue-600 rounded p-2 capitalize" : " w-full text-slate-800 dark:text-white dark:hover:text-blue-700 rounded p-2 duration-300 hover:text-blue-700 capitalize"} onClick={() => setSelectedNav(index)}>{nav}</button>
                                 </a>
                             </li>
                             ))}
                         </ul>
                     </nav>
                     <div className="btn md:w-1/2 w-full col-span-2 flex flex-row gap-2 justify-center md:flex md:justify-end md:flex-row items-center md:gap-10">
-                        <button className="md:w-fit w-30 md:px-4 md:text-lg text-sm whitespace-nowrap sm:text-sm p-2 bg-blue-600 text-white font-bold rounded-full hover:shadow-md hover:bg-blue-700 hover:border-blue-600">Download CV</button>
+                        <a href={resumeFile} download={"Justine_T_Liwanag_Resume"}>
+                            <button className="md:w-fit w-30 md:px-4 md:text-lg text-sm whitespace-nowrap sm:text-sm p-2 bg-blue-600 text-white font-bold rounded-full hover:shadow-md hover:bg-blue-700 hover:border-blue-600">Download CV</button>
+                        </a>
                         <DarkMode darkMode={darkMode} isDarkMode={isDarkMode}/>
                     </div>
                 </div>

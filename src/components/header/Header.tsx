@@ -18,9 +18,11 @@ const Header = ({darkMode, isDarkMode} : Props) => {
 
     return (
         <div>     
-            <div className="bg-white dark:bg-slate-800 header w-full grid grid-cols-2 justify-around gap-3 h-fit p-4 items-center md:h-24 md:p-10 md:flex md:justify-between md:px-32 shadow-sm z-50">
+            <div className="bg-white dark:bg-slate-800 header w-full grid grid-cols-2 justify-around gap-3 h-fit p-4 items-center md:h-24 md:p-10 md:flex md:justify-between md:px-32 shadow-sm z-30">
                 <div className="logo text-4xl font-bold md:w-1/4">
-                    <h2 className="font-bold tracking-tight dark:text-white">Justine<span className="text-blue-600">L.</span></h2>
+                    <a href="#home">
+                        <h2 className="font-bold tracking-tight dark:text-white">Justine<span className="text-blue-600">L.</span></h2>
+                    </a>
                 </div>     
                
                 <button className={clickMenu === true ? "hidden justify-end cursor-pointer md:hidden" : "flex justify-end cursor-pointer md:hidden"} onClick={() => setClickMenu(true)}>

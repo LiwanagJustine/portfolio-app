@@ -26,13 +26,13 @@ function App() {
   return (
     <>
     <div className={isDarkMode === true ? "container w-full dark" : "container w-full"}>
-      <header className="header fixed w-full z-50">
+      <header className="header fixed w-full z-30">
         <Header darkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       </header>
       <div className="home-cont w-full pt-24 dark:bg-slate-800 z-0" id='home'>
         <Home/>
       </div>
-      <div className="about-cont w-full pt-3 z-0 dark:bg-slate-800 " id='about'>
+      <div className="about-cont w-full pt-24 z-0 dark:bg-slate-800 " id='about'>
         <About/>
       </div>
       <div className="skill-cont pt-24 z-0 dark:bg-slate-800 " id="skills">

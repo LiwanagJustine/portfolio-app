@@ -65,13 +65,13 @@ const Home = () => {
                                 <FaEnvelope className="text-3xl text-slate-800 duration-300 hover:text-blue-600 dark:text-white"/>
                             </a>
                         </div>
-                        
                     </div>
                 </div>
                 <div className="right-cont md:w-1/2 md:h-full">
                     <img className='md:w-full md:h-full md:block' src={imageHomeBG} alt="" />
                 </div>
             </div>
+            
         </div>
     );
 };

@@ -68,7 +68,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="right-cont md:w-1/2 md:h-full">
-                    <img className='md:w-full md:h-full md:block' src={imageHomeBG} alt="" />
+                    <img className='md:w-full md:h-full' src={imageHomeBG} alt="" />
                 </div>
             </div>
             

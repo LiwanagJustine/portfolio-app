@@ -8,7 +8,7 @@ const Close = ({onClose}: Props) => {
         <div>
             <div className="close-icon">
                 <button onClick={onClose}>
-                    <FaXmark className="text-2xl"/>
+                    <FaXmark className="text-2xl dark:text-white"/>
                 </button>  
             </div>
             

@@ -3,6 +3,9 @@ import { useState } from "react";
 import DarkMode from "../buttons/DarkMode";
 import Close from "../buttons/Close";
 
+// icons 
+import {GiHamburgerMenu} from 'react-icons/gi'
+
 import resumeFile from '../../assets/files/Justine T. Liwanag-Resume.pdf';
 
 interface Props{
@@ -26,7 +29,7 @@ const Header = ({darkMode, isDarkMode} : Props) => {
                 </div>     
                
                 <button className={clickMenu === true ? "hidden justify-end cursor-pointer md:hidden" : "flex justify-end cursor-pointer md:hidden"} onClick={() => setClickMenu(true)}>
-                    <svg className="text-3xl" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>  
+                    <GiHamburgerMenu className="text-4xl dark:text-white" /> 
                 </button>
                 <div className="close-btn flex justify-end cursor-pointer md:hidden">
                     {clickMenu && <Close onClose={() => setClickMenu(false)}/>}
@@ -46,7 +49,7 @@ const Header = ({darkMode, isDarkMode} : Props) => {
                     </nav>
                     <div className="btn md:w-1/2 w-full col-span-2 flex flex-row gap-2 justify-center md:flex md:justify-end md:flex-row items-center md:gap-10">
                         <a href={resumeFile} download={"Justine_T_Liwanag_Resume"}>
-                            <button className="md:w-fit w-30 md:px-4 md:text-lg text-sm whitespace-nowrap sm:text-sm p-2 bg-blue-600 text-white font-bold rounded-full hover:shadow-md hover:bg-blue-700 hover:border-blue-600">Download CV</button>
+                            <button className="md:w-fit w-30 md:px-4 md:text-lg text-sm whitespace-nowrap sm:text-sm p-2 border-2 border-blue-600 text-blue-600 font-bold rounded-full duration-300 hover:bg-blue-600 hover:text-white">Download CV</button>
                         </a>
                         <DarkMode darkMode={darkMode} isDarkMode={isDarkMode}/>
                     </div>

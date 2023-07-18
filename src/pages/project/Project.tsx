@@ -17,7 +17,7 @@ const Project = () => {
     return (
         <div>
             <div className="project-container pt-5 md:w-11/12 w-full h-fit mx-auto pb-10 md:px-10 p-5 md:shadow-custom md:rounded-2xl">
-                <h3 className='mx-auto md:text-3xl font-bold bg-blue-600 text-white w-fit h-fit py-3 px-20 shadow-lg rounded-full'>Projects</h3>
+                <h3 className='text-4xl mx-auto md:text-5xl font-semibold text-blue-600 w-fit h-fit py-3 px-20 rounded-full flex items-center'> <span>{"<"}</span> Project <span>{"/>"}</span></h3>
                 <div className="content w-full pt-3 ">
                     <div className="project-box md:flex md:flex-wrap md:justify-between items-center md:mt-10 mt-5" >
                         {showIEnter && <IEnterViewImage onClose={() => setShowIEnter(false)}/>}

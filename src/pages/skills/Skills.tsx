@@ -13,12 +13,13 @@ import imgTailwind from '../../assets/images/Tailwind_CSS_Logo.svg.png'
 import imgC from '../../assets/images/ISO_C++_Logo.svg.png';
 import imgJava from '../../assets/images/java-logo-1.png';
 
+
 const Skills = () => {
 
     return (
         <div>
              <div className="skill-container pt-5 w-11/12 mx-auto overflow-hidde h-1/2 md:shadow-custom md:rounded-2xl ">
-                <h3 className='mx-auto md:text-3xl font-bold bg-blue-600 text-white w-fit h-fit py-3 px-20 shadow-lg rounded-full'>Skills</h3>
+                <h3 className='text-4xl mx-auto md:text-5xl font-semibold text-blue-600 w-fit h-fit py-3 px-20 rounded-full flex items-center '> <span>{"<"}</span> Skills <span>{"/>"}</span></h3>
                 <div className="content w-full flex flex-wrap mt-10 mx-auto justify-around gap-5 pt-3 overflow-auto p-5">
                     <div className="box w-72 shadow-custom rounded py-5 pl-6 pr-5">
                         <div className="img ">

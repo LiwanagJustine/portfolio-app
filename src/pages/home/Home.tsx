@@ -18,9 +18,9 @@ const Home = () => {
     const words = ["Frontend Developer", "React Developer", "Bootstrap Developer","Tailwind Css Developer", "Angular Developer","Laravel Developer"];
     
     return (
-        <div className="home-container w-full md:pl-32 h-fit">
-            <div className="home w-full md:h-full md:flex">
-                <div className="left-cont md:w-1/2 md:text-left text-center md:pl-0 pt-5 p-10">
+        <div className="home-container dark:bg-slate-800 md:w-full w-full mx-auto h-fit ">
+            <div className="home w-full md:flex mx-auto">
+                <div className="left-cont md:w-1/2 md:text-left ml-0 text-center lg:pl-32 pt-5 p-10">
                     <div className="intro-cont md:mt-32">
                         <h5 className='md:text-2xl md:font-semibold text-blue-500 md:flex md:justify-start flex justify-center gap-3'>Hello<span><FaHandsClapping className="text-yellow-300"/></span> I'm</h5>
                         <h2 className='md:text-5xl font-bold text-slate-800 md:mt-2 text-3xl dark:text-white'>Justine Liwanag</h2>
@@ -67,8 +67,8 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="right-cont md:w-1/2 md:h-full">
-                    <img className='md:w-full md:h-full' src={imageHomeBG} alt="" />
+                <div className="right-cont md:w-1/2 w-full">
+                    <img className=' border-black h-40 ' src={imageHomeBG} alt="" />
                 </div>
             </div>
             

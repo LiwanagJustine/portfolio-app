@@ -1,6 +1,6 @@
 
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 
 // components 
@@ -16,20 +16,28 @@ import Footer from './components/footer/Footer';
 
 function App() {
 
-  // const [darkMode, setDarkMode] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const toggleDarkMode = () => {
-    setIsDarkMode((prevDarkMode) => !prevDarkMode);
-  };
 
+  useEffect(() => {
+    // Check if dark mode is already set in local storage
+    const isDarkModeSet = localStorage.getItem('isDarkMode');
+    setIsDarkMode(isDarkModeSet === 'true');
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    localStorage.setItem('isDarkMode', newDarkMode.toString());
+    document.body.classList.toggle('bg-slate-800', newDarkMode);
+  };
 
   return (
     <>
-    <div className={isDarkMode === true ? "container w-full dark" : "container w-full"}>
-      <header className="header w-full z-30 fixed">
-        <Header darkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      </header>
-      <div className="home-cont w-full pt-24 dark:bg-slate-800 z-0" id='home'>
+    <header className={isDarkMode === true ? "header w-full z-30 dark fixed" : "header w-full z-30 fixed"}>
+      <Header darkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+    </header>
+    <div className={isDarkMode === true ? "container mx-auto w-full dark" : "container w-full mx-auto"}>
+      <div className="home-cont w-full pt-24 mx-auto dark:bg-slate-800 z-0" id='home'>
         <Home/>
       </div>
       <div className="about-cont w-full pt-24 z-0 dark:bg-slate-800 " id='about'>

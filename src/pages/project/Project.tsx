@@ -28,7 +28,7 @@ const Project = () => {
                             <img src={imgIEnter} alt="" className='z-5 shadow-xl duration-300 rounded'/>
                         </div>
                         <div className="about-project md:pl-20 md:pr-5 md:w-1/2 mt-8 p-5">
-                            <h4 className='text-2xl text-slate-800 font-bold mb-3 hover:text-blue-700 duration-300 cursor-pointer'>IEnter QR code Monitoring Web based System</h4>
+                            <h4 className='dark:text-slate-300 text-2xl text-slate-800 font-bold mb-3 hover:text-blue-700 duration-300 cursor-pointer'>IEnter QR code Monitoring Web based System</h4>
                             <p className='text-md font-semibold text-slate-500'>The "iEnter: QR Code Monitoring Web-based System" is a capstone project focused on creating a user-friendly web application. The system aims to enhance guest management and streamline the check-in process at GNVHS (Guiguinto National Vocational High School). By using QR codes, the system ensures efficient monitoring of guest arrivals, making the visiting experience smoother and more organized.</p>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ const Project = () => {
                             <img src={imgExom} alt="" className='shadow-xl duration-300 hover:brightness-75 cursor-pointer rounded'/>
                         </div>
                         <div className="about-project md:pl-5 md:pr-20 md:w-1/2 mt-8 p-5">
-                            <h4 className='text-2xl text-slate-800 font-bold mb-3 hover:text-blue-700 duration-300 cursor-pointer'>CICT Extension Office Management System</h4>
+                            <h4 className='dark:text-slate-300 text-2xl text-slate-800 font-bold mb-3 hover:text-blue-700 duration-300 cursor-pointer'>CICT Extension Office Management System</h4>
                             <p className='text-md font-semibold text-slate-500'>The "CICT Extension Office Management System" is an intern project that aims to develop a comprehensive system for managing the projects and activities of the college's extension office. With a primary focus on serving extension partners, the system will facilitate efficient coordination, communication, and organization of extension initiatives. It will streamline processes, ensuring effective management and successful implementation of projects aimed at benefiting the college and its extension partners.</p>
                         </div>
                     </div>

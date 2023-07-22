@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import DarkMode from "../buttons/DarkMode";
 import Close from "../buttons/Close";
@@ -16,8 +16,28 @@ interface Props{
 const Header = ({darkMode, isDarkMode} : Props) => {
 
     const navigation = ["home", "about", "skills", "projects", "contact"];
-    const [selectedNav, setSelectedNav] = useState(0);
-    const [clickMenu, setClickMenu] = useState(false);
+  const [selectedNav, setSelectedNav] = useState(0);
+  const [clickMenu, setClickMenu] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navigation.map((nav) => document.getElementById(nav));
+      const currentSectionIndex = sections.findIndex(
+        (section) =>
+          section !== null &&
+          section.getBoundingClientRect().top <= window.innerHeight / 2 &&
+          section.getBoundingClientRect().bottom >= window.innerHeight / 2
+      );
+
+      setSelectedNav(currentSectionIndex);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
     return (
         <div>     

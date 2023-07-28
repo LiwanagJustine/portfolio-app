@@ -55,24 +55,24 @@ function App() {
         <Header darkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       </header>
       <div className={isDarkMode === true ? "container mx-auto w-full dark" : "container w-full mx-auto"}>
-        <div className="home-cont w-full pt-24 mx-auto dark:bg-slate-800 z-0" id='home'>
+        <section className="home-cont w-full pt-24 mx-auto dark:bg-slate-800 z-0" id='home'>
           <Home/>
-        </div>
-        <div className="about-cont w-full pt-24 z-0 dark:bg-slate-800 " id='about'>
+        </section>
+        <section className="about-cont w-full pt-24 z-0 dark:bg-slate-800 " id='about'>
           <About/>
-        </div>
-        <div className="skill-cont pt-24 z-0 dark:bg-slate-800 " id="skills">
+        </section>
+        <section className="skill-cont pt-24 z-0 dark:bg-slate-800 " id="skills">
           <Skills />
-        </div>
-        <div className="project-cont pt-24 z-0 dark:bg-slate-800 " id="projects">
+        </section>
+        <section className="project-cont pt-24 z-0 dark:bg-slate-800 " id="projects">
           <Project />
-        </div>
-        <div className="contact-cont pt-24 z-0 dark:bg-slate-800 " id="contact">
+        </section>
+        <section className="contact-cont pt-24 z-0 dark:bg-slate-800 " id="contact">
           <Contact />
-        </div>
-        <div className="footer dark:bg-slate-950">
+        </section>
+        <section className="footer dark:bg-slate-950">
           <Footer />
-        </div>
+        </section>
       </div>
     </div>
 } 

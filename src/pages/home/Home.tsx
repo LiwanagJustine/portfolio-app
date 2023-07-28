@@ -14,11 +14,10 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Home = () => {
 
-    
     const words = ["Frontend Developer", "React Developer", "Bootstrap Developer","Tailwind Css Developer", "Angular Developer","Laravel Developer"];
     
     return (
-        <div className="home-container dark:bg-slate-800 md:w-full w-full mx-auto h-fit ">
+        <div className="home-container dark:bg-slate-800 md:w-full w-full mx-auto h-fit fade-in">
             <div className="home w-full md:flex mx-auto">
                 <div className="left-cont md:w-1/2 md:text-left ml-0 text-center lg:pl-32 pt-5 p-10">
                     <div className="intro-cont md:mt-32">
@@ -71,7 +70,6 @@ const Home = () => {
                     <img className=' border-black h-40 ' src={imageHomeBG} alt="" />
                 </div>
             </div>
-            
         </div>
     );
 };

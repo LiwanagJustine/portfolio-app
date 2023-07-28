@@ -1,6 +1,26 @@
-import './Contact.css'
+// import { useState } from 'react';
+import './Contact.css'  
+import EmailSender from '../../utils/emailSender/EmailSender'; // Adjust the path as per your file structure
 
 const Contact = () => {
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+    
+        const formData = new FormData(event.currentTarget);
+        const emailData = {
+          SecureToken: '9fc0adc5-d887-4005-8e73-8855a9e56471',
+          To: 'justine.t.liwanag@gmail.com',
+          From: formData.get("email") as string,
+          Subject: "This is the subject",
+          Body: formData.get("message") as string,
+        };
+    
+        EmailSender.send(emailData)
+          .then((message) => alert(message))
+          .catch((error) => alert(error));
+      };
+
     return (
         <div>
             <div className="contact-container h-fit pb-10">
@@ -8,10 +28,11 @@ const Contact = () => {
                 <div className="contact-content w-11/12 md:flex md:flex-row flex flex-col h-fit shadow-xl gap-5 bg-slate-50 dark:shadow-slate-600 dark:shadow-lg mx-auto md:rounded-xl rounded-md p-3 md:p-0 ">
                     <div className="contact-cont md:w-1/2 md:p-12 p-5">
                         <h4 className='text-center md:text-left text-slate-700 font-bold text-4xl mb-4'>Message Me!</h4>
-                        <form action="" className="form flex flex-col gap-5">
+                        <form action="" className="form flex flex-col gap-5" method='post' onSubmit={handleSubmit}>
                             <input className='rounded border-none shadow-lg p-3 pl-5 ' type="text" id='name' name='name' placeholder='Name' required/>
                             <input className='rounded border-none shadow-lg p-3 pl-5' type="email" id='email' name='email' placeholder='Email' required/>
-                            <textarea className='rounded border-none shadow-lg p-3 pl-5' name="message" id="message" placeholder='Message' cols={50} rows={4}></textarea>               
+                            <textarea className='rounded border-none shadow-lg p-3 pl-5' name="message" id="message" placeholder='Message' cols={50} rows={4}></textarea>  
+                            <button type='submit' id='submit' className='bg-blue-600 text-white font-semibold text-lg rounded-full mx-auto w-1/2 p-3 hover:bg-blue-700 hover:shadow-lg'>Send</button>             
                         </form>
                     </div>
                     <div className="contact-map md:w-1/2">

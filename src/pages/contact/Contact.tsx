@@ -12,7 +12,7 @@ const Contact = () => {
     
         emailjs
           .sendForm('service_dd1fg1s', 'template_be9rsov', e.target, 'wq1jftqFOPkZbhtXr')
-          .then((response) => {
+          .then((_response) => {
             successDiv?.classList.remove('hidden');
     
             setTimeout(() => {
@@ -21,7 +21,7 @@ const Contact = () => {
 
             e.target.reset();
           })
-          .catch((error) => {
+          .catch((_error) => {
 
             errorDiv?.classList.remove('hidden');
     
